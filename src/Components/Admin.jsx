@@ -145,6 +145,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addData } from "../utils/homeDataSlice";
 import { addServiceQuote } from "../utils/serviceQuoteSlice";
+import { BACKEND_URL } from "../utils/constant";
 
 const Admin = () => {
   const dispatch = useDispatch();
@@ -162,7 +163,7 @@ const Admin = () => {
   // Fetch home data
   const getData = async () => {
     try {
-      const res = await axios.get("http://localhost:1111/getData");
+      const res = await axios.get(BACKEND_URL + "/getData");
       dispatch(addData(res?.data));
     } catch (err) {
       console.error("Error fetching data:", err.message);
@@ -172,7 +173,7 @@ const Admin = () => {
   // Fetch service quote
   const getServiceQuote = async () => {
     try {
-      const res = await axios.get("http://localhost:1111/get/serviceQuote");
+      const res = await axios.get(BACKEND_URL + "/get/serviceQuote");
       dispatch(addServiceQuote(res?.data[0]?.serviceQuote));
     } catch (err) {
       console.error("Error fetching service quote:", err.message);
@@ -182,7 +183,7 @@ const Admin = () => {
   // Check admin authentication
   const checkAuth = async () => {
     try {
-      await axios.get("http://localhost:1111/admin/verify", {
+      await axios.get(BACKEND_URL + "/admin/verify", {
         withCredentials: true,
       });
     } catch (err) {
@@ -195,7 +196,7 @@ const Admin = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:1111/post/bgimage",
+        BACKEND_URL + "/post/bgimage",
         { bgImage: bgImage.myFile },
         { withCredentials: true }
       );
@@ -249,7 +250,7 @@ const Admin = () => {
   const handleUpdate = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:1111/admin/update",
+        BACKEND_URL + "/admin/update",
         { heroQuotes: heroQuote, heroDescription: heroDesc },
         { withCredentials: true }
       );
@@ -268,7 +269,7 @@ const Admin = () => {
   const updateServiceQuote = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:1111/update/serviceQuote",
+        BACKEND_URL + "/update/serviceQuote",
         { serviceQ },
         { withCredentials: true }
       );

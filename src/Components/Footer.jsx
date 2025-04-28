@@ -1,13 +1,14 @@
 import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../utils/constant";
 
 const Footer = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:1111/admin/logout",
+        BACKEND_URL + "/admin/logout",
         {},
         { withCredentials: true }
       );

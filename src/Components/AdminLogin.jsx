@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../utils/constant";
 
 const AdminLogin = () => {
   const [userName, setUserName] = useState("Admin@1234");
@@ -10,7 +11,7 @@ const AdminLogin = () => {
   const handleLogin = async () => {
     try {
       await axios.post(
-        "http://localhost:1111/admin/login",
+        BACKEND_URL + "/admin/login",
         { userName, password },
         { withCredentials: true }
       );

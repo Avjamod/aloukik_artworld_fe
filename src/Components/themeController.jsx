@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../utils/themeSlice";
 import { BASE_URL } from "../utils/constants";
 import axios from "axios";
+import { BACKEND_URL } from "../utils/constant";
 
 const ThemeController = () => {
   const [theme, setTheme] = useState("dark");
@@ -37,7 +38,7 @@ const ThemeController = () => {
   ];
   const handleThemeControl = async (theme) => {
     try {
-      const res = await axios.put(BASE_URL + "/theme", { userTheme: theme });
+      const res = await axios.put(BACKEND_URL + "/theme", { userTheme: theme });
       setTheme(theme);
       dispatch(changeTheme(theme));
       console.log(res.data);
@@ -48,7 +49,7 @@ const ThemeController = () => {
 
   const getTheme = async () => {
     try {
-      const res = await axios.get(BASE_URL + "/theme");
+      const res = await axios.get(BACKEND_URL + "/theme");
       dispatch(changeTheme(res?.data?.theme));
       console.log(res.data);
     } catch (err) {

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { addServiceData } from "../utils/serviceDataSlice";
 import { addServiceQuote } from "../utils/serviceQuoteSlice";
+import { BACKEND_URL } from "../utils/constant";
 
 const ServiceMain = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const ServiceMain = () => {
   const serviceQuote = useSelector((store) => store.serviceQuote || "");
   const getServiceData = async () => {
     try {
-      const res = await axios.get("http://localhost:1111/getServices");
+      const res = await axios.get(BACKEND_URL + "/getServices");
       dispatch(addServiceData(res?.data || []));
     } catch (err) {
       console.error(err.message);
@@ -19,7 +20,7 @@ const ServiceMain = () => {
   };
   const getServiceQuote = async () => {
     try {
-      const data = await axios.get("http://localhost:1111/get/serviceQuote");
+      const data = await axios.get(BACKEND_URL + "/get/serviceQuote");
       console.log(data?.data[0]?.serviceQuote);
       dispatch(addServiceQuote(data?.data[0]?.serviceQuote));
     } catch (err) {

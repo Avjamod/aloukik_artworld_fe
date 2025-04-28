@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addServiceData } from "../utils/serviceDataSlice";
 import axios from "axios";
 import Counter from "./Counter";
+import { BACKEND_URL } from "../utils/constant";
 
 const ServicePage = () => {
   const serviceData = useSelector((store) => store.serviceData) || [];
@@ -10,7 +11,7 @@ const ServicePage = () => {
 
   const getServiceData = async () => {
     try {
-      const res = await axios.get("http://localhost:1111/getServices");
+      const res = await axios.get(BACKEND_URL + "/getServices");
       dispatch(addServiceData(res?.data || []));
     } catch (err) {
       console.error("Error fetching service data:", err.message);
