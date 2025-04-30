@@ -12,7 +12,7 @@ const AboutCompany = () => {
       </div>
       <div className="md:flex mb-20 ">
         <div className="bg-base-100 md:w-[50%] p-4 ">
-          <p className="uppercase text-2xl font-extrabold mb-10">
+          <p className="uppercase md:text-3xl text-2xl font-extrabold mb-10">
             "Turning <span className="text-[#00638F]">imagination</span> into
             breathtaking on-screen reality."
           </p>

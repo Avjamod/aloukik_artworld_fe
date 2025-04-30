@@ -70,10 +70,15 @@ const Contact = () => {
   return (
     <div>
       <div className="px-4 md:pt-18 pt-16">
-        <h1 className="text-center bg-base-200 md:p-20 rounded-b-2xl font-bold md:text-5xl text-3xl uppercase mb-6 ">
+        <h1 className="text-center bg-base-200 p-20 rounded-b-2xl font-bold text-5xl uppercase mb-8 ">
           Contact
         </h1>
       </div>
+      <p className="md:text-3xl text-2xl font-bold text-center uppercase m-4 my-10 max-w-3xl mx-auto">
+        "We're here to help — <br />
+        Reach out and let's bring your
+        <span className="text-[#00638F] "> vision</span> to life!"
+      </p>
       <div className="md:flex mb-20">
         <fieldset className="fieldset md:w-[55%] bg-base-200 border border-base-300 p-4 rounded-box mx-4 mb-6">
           <legend className="fieldset-legend uppercase text-xl font-bold">
@@ -152,25 +157,43 @@ const Contact = () => {
             </legend>
             <div className="font-bold textarea-md uppercase">Botad</div>
             <div className="text-sm flex items-center mb-2">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/6948/6948631.png"
-                className="w-7 h-7 mr-3"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                className="fill-current mr-2"
+              >
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+              </svg>
               310, Simandhar Complex, Panjarapol Road, Tower Rd, Botad, Gujarat
               364710
             </div>
             <div className="text-sm flex items-center mb-2">
-              <img
-                src="https://cdn-icons-png.freepik.com/256/11714/11714617.png"
-                className="w-6 h-6 mr-3"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                className="fill-current mr-2"
+              >
+                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1v3.61a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.61a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1.05l-2.32 2.16z" />
+              </svg>
               +91 9737951547
             </div>
             <div className="text-sm flex items-center">
-              <img
-                src="https://media.lordicon.com/icons/wired/flat/45-clock-time.svg"
-                className="w-7 h-7 mr-3"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="25"
+                height="25"
+                className="fill-current mr-2"
+              >
+                <path d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1zm0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9zm.5-13h-1a1 1 0 0 0-1 1v5a1 1 0 0 0 .553.894l3 1.5a1 1 0 0 0 .894-1.788L12.5 13.382V9a1 1 0 0 0-1-1z" />
+              </svg>
               Mon - Fri: 9:00 - 19:00
             </div>
           </fieldset>
@@ -180,14 +203,38 @@ const Contact = () => {
               Our Social Media
             </legend>
             <div className="flex">
-              <img
-                className="md:w-10 w-7 h-7 mr-5"
-                src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
-              />
-              <img
-                className="md:w-7  w-7 h-7 mr-5"
-                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                className="fill-current m-1"
+              >
+                <path d="M19 0h-14a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5v-14a5 5 0 0 0-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5zm13.5 11.25h-3v-5.5c0-1.32-.03-3.01-1.84-3.01-1.85 0-2.13 1.44-2.13 2.92v5.59h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.83-1.56 3.02 0 3.57 1.99 3.57 4.58v5.62z" />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="33"
+                height="33"
+                className="fill-current m-1"
+              >
+                <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM4.5 7.75A3.25 3.25 0 0 1 7.75 4.5h8.5A3.25 3.25 0 0 1 19.5 7.75v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5A3.25 3.25 0 0 1 4.5 16.25v-8.5Zm7.5 1.25a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm0 1.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm4.75-3.25a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                className="m-1 fill-current"
+              >
+                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.511l-8 5.333-8-5.333V6h16Zm0 12H4V8.489l8 5.333 8-5.333V18Z" />
+              </svg>
             </div>
           </fieldset>
         </div>

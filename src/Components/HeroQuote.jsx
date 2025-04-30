@@ -1,8 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 const HeroQuote = () => {
-  const { heroQuotes } = useSelector((store) => store.homeData) || {};
   return (
     <div>
       <div
@@ -15,8 +13,9 @@ const HeroQuote = () => {
         <div className="hero-overlay"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="">
-            <h1 className="mb-5 md:text-8xl text-4xl font-bold opacity-70 uppercase">
-              {heroQuotes}
+            <h1 className="mb-5 md:text-8xl text-5xl font-bold opacity-70 uppercase">
+              The future of storytelling is
+              <span className="text-[#00638F]"> visual</span>.
             </h1>
           </div>
         </div>
