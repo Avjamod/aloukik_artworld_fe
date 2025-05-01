@@ -1,28 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import HeroQuote from "./HeroQuote";
 import HeroSection from "./HeroSection";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { addData } from "../utils/homeDataSlice";
-import AboutMain from "./ServiceMain";
 import Counter from "./Counter";
 import ServiceMain from "./ServiceMain";
-import { BACKEND_URL } from "../utils/constant";
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const getData = async () => {
-    try {
-      const res = await axios.get(BACKEND_URL + "/getData");
-
-      dispatch(addData(res?.data));
-    } catch (err) {
-      console.error(err.message);
-    }
-  };
-  useEffect(() => {
-    getData();
-  }, []);
   return (
     <div>
       <HeroQuote />
