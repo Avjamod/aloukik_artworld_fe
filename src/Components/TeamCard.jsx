@@ -10,11 +10,7 @@ const TeamCard = ({ name, about, src }) => {
         <div className="card-body">
           <h2 className="card-title text-lg font-semibold">{name}</h2>
           <p className="text-sm text-gray-600">{about}</p>
-          <div className="card-actions justify-end">
-            <button className="btn bg-[#008dca] hover:bg-[#027bb3]">
-              Watch
-            </button>
-          </div>
+          <div className="card-actions justify-end"></div>
         </div>
       </div>
     </div>

@@ -90,7 +90,7 @@ const ServicePage = () => {
             key={service.id}
             className={`flex flex-col md:flex-row items-center ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
-            } bg-gray-50 p-6 rounded-xl shadow-md`}
+            } bg-base-300 p-6 rounded-xl shadow-md`}
           >
             <figure
               className="diff aspect-16/9 w-full md:w-1/2 rounded-lg shadow-lg"

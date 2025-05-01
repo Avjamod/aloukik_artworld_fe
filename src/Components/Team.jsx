@@ -44,7 +44,7 @@ const Team = () => {
         />
         <TeamCard
           name={"Aryan"}
-          about={"IT head"}
+          about={"Studio head"}
           src={
             "https://img.freepik.com/free-vector/smiling-young-man-glasses_1308-174702.jpg?ga=GA1.1.463851474.1742881166&semt=ais_hybrid"
           }
