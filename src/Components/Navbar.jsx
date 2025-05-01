@@ -55,7 +55,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <img src="/public/logo.ico.png" className="md:w-[12%] w-[20%] " />
+          <img src="/logo.ico.png" className="md:w-[12%] w-[20%] " />
           <Link
             className="btn btn-ghost md:text-2xl text-xl  font-bold uppercase "
             to="/"
